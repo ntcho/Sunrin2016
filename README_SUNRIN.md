@@ -1,5 +1,5 @@
-Sunrin
-======
+Sunrin Lecture
+==============
 
 Projects from Sunrin Internet high school
 ------------------------------------------
