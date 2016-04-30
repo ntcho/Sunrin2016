@@ -33,11 +33,5 @@
     <ClCompile Include="Problem6.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Problem7.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Problem8.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

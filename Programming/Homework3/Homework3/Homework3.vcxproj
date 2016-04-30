@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{8B2189C9-9796-41BE-898E-9671EFF91327}</ProjectGuid>
+    <ProjectGuid>{661DE99A-01C0-4A51-B5DE-2BD2B273317A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Homework2</RootNamespace>
+    <RootNamespace>Homework3</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -148,8 +148,6 @@
     <ClCompile Include="Problem4.c" />
     <ClCompile Include="Problem5.c" />
     <ClCompile Include="Problem6.c" />
-    <ClCompile Include="Problem7.c" />
-    <ClCompile Include="Problem8.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
