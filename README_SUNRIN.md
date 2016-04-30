@@ -1,8 +1,11 @@
-# Sunrin
-Projects from Sunrin Internet high school.
+Sunrin
+======
 
-Includes:
+Projects from Sunrin Internet high school
+------------------------------------------
 
-Programming (C)
+###Includes:
 
-Web Programming (HTML, CSS)
+ * Programming (C Language)
+
+ * Web Programming (HTML, CSS)
