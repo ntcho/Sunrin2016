@@ -1,0 +1,27 @@
+﻿(            1            )
+<html>
+<head>
+	<meta charset="(   2   )">
+	(     3     )강아지 키우기 (     3      )
+	<link href="style.css" rel="stylesheet" type="text/css">	
+</head>
+<body>
+	<header>
+		<h1>입양하기</h1>
+			(     4       )
+				<ul>
+					<li><a href="#">애완견 종류</a></li>
+					<li><a href="#">입양하기</a></li>
+					<li><a href="#">건강돌보기</a></li>
+					<li><a href="#">더불어살기</a></li>
+				</ul>
+			(      4       )
+	</header>
+	<section>
+		<img src="puppy.png">
+	</section>
+	(       5         )
+		<p>Copyright 2012 funnycom</p>
+    (        5       )
+</body>
+</html>

@@ -1,0 +1,27 @@
+@charset "utf-8"
+
+h1 {
+	text-align: center;
+	text-indent: 50px;
+}
+
+#text1 {
+	text-transform: capitalize;
+}
+
+#text2 {
+	text-decoration: underline;
+}
+
+#text3 {
+	text-decoration: line-through;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: red;
+}

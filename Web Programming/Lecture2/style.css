@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+
+ body{
+	font-family:"맑은 고딕", "고딕", "굴림";
+}
+header {
+	width: 620px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #432;
+	padding: 10px;
+	overflow: hidden;
+}
+header h1{
+	width:140px;
+	float:left;	
+	color:#ffffff;
+}
+
+header nav {
+	width:460px;
+	float:right;	
+	margin-top:15px;
+}
+
+nav ul{
+	list-style-type:none;	
+}
+
+nav ul li{
+	display: inline;
+	float: left;
+	margin: 10px;
+}
+
+
+nav ul li a{
+	color:white;
+	text-decoration:none;	
+}
+p {
+	font-size:20px;
+	line-height:20px;
+}
+
+h1{
+	font-size:2em;	
+}
+
+h3{
+	font-size:22px;
+	color: #D25;
+}
+
+section{
+	width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+	border:5px solid #555;
+	padding:15px;
+}
+img#puppy{
+	float:right;
+	margin-left:10px;
+	border:1px solid #ccc;
+	box-shadow: -2px 3px  5px #000;
+	-moz-box-shadow: -2px 3px 5px #000;
+	-webkit-box-shadow: -2px 3px  5px #000;
+}
+
+
+footer{
+	width: 620px;
+	margin-right: auto;
+	margin-left: auto;	
+	margin-top:0;
+	padding:10px;
+	background-color:#555;
+	color:white;	
+	text-align:center;
+}

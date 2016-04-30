@@ -1,0 +1,111 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<style>
+		html, body {
+			margin: 150px;
+			padding: 0;
+			box-sizing: border-box;
+			width: 70%;
+			position: absolute;
+			top: 50%;
+			margin-top: -100px;
+			left: 0;
+		}
+
+		#board{
+			width: 100%;
+			margin: auto;
+			margin-bottom: 5px;
+		}
+		
+		#posttype {
+			width: 15%;
+			margin-bottom: 10px;
+		}
+
+		#title {
+			border-top: 2px solid black;
+			padding-top: 5px;
+		}
+
+		#option {
+			border-top: 2px solid black;
+			padding-top: 5px;
+		}
+
+		#title input {
+			width: 80%;
+		}
+		.padding-wrapper {
+			width: 15%;
+			display: inline-block;
+		}
+
+		#content {
+			width: 100%;
+		}
+		#content textarea {
+			width: 100%;
+		}
+
+		.opt{
+			margin-bottom: 10px;
+		}
+		.opt span{
+			font-size: 0.8em;
+		}
+		.opt input:nth-child(3){
+			margin-left: 10px;
+		}
+
+		#btns {
+			float:left;
+			margin-top:20px;
+		}
+
+		#btns button {
+			width: 80px;
+			height: 30px;
+		}
+	</style>
+</head>
+
+<body>
+  <section id="container">
+  	<select id="board">
+  			<option value="" disabled selected>글을 쓸 보드를 선택해주세요.</option>
+  			<option value="우리반 퀴즈 공간">우리반 퀴즈 공간</option>
+  			<option value="우리반 일상사진 공유">우리반 일상 사진 공유</option>
+  			<option value="선생님만의 학급일지">선생님만의 학급일지</option>
+  	</select>
+  	<div id="title">
+  		<select id="posttype">
+  		    <option value="일반">일반</option>
+  		    <option value="미션">미션</option>
+  		    <option value="ASK">ASK</option>
+  		</select>
+  		<input type="text">
+  	</div>
+  	<div id="option">
+  		<div class="opt">
+  			<div class="padding-wrapper"><span>게시글 공개</span></div>
+  			<input name="option" type="radio"><span>공개</span>
+  			<input name="option" type="radio"><span>비공개</span>
+  		</div>
+  		<div class="opt">
+  			<div class="padding-wrapper"><span>댓글 권한</span></div>
+  			<input type="checkbox"><span>댓글 서로공개</span>
+  			<input type="checkbox"><span>부모/학생별 중복 댓글 허용</span>
+  		</div>
+  	</div>
+  	<div id="content">
+  		<textarea cols="30" rows="10" placeholder="글의 내용을 입력해주세요."></textarea>
+  	</div>
+  	<div id="btns">
+  		<button>취소</button>
+  		<button>저장</button>
+  	</div>
+  </section>
+</body>
+</html>

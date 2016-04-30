@@ -1,0 +1,21 @@
+@charset "utf-8"
+
+body {
+	text-align: center;
+}
+
+#txt1 {
+	font-size: 28px;
+	color:rgba(0,0,255, 0.7);
+}
+
+.over {
+	margin-top: 20px;
+	font-family: "궁서", Arial;
+	width: 200px;
+	height: 100px;
+	margin: 10px auto;
+	line-height: 1.5;
+	overflow: auto;
+	border: 1px solid #ccc;
+}
