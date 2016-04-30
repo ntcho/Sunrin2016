@@ -21,5 +21,17 @@
     <ClCompile Include="Problem2.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Problem3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem4.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem5.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Problem6.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{B67F6889-A4A6-490E-9A8D-80972C4F5C98}</ProjectGuid>
+    <ProjectGuid>{8B2189C9-9796-41BE-898E-9671EFF91327}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Homework1</RootNamespace>
+    <RootNamespace>Homework2</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -142,10 +142,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Problem1.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="Problem1.c" />
     <ClCompile Include="Problem2.c" />
+    <ClCompile Include="Problem3.c" />
+    <ClCompile Include="Problem4.c" />
+    <ClCompile Include="Problem5.c" />
+    <ClCompile Include="Problem6.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
