@@ -1,0 +1,17 @@
+﻿Build started 4/11/2016 3:09:53 PM.
+     1>Project "H:\Sunrin\Programming\ConsoleApplication8\ConsoleApplication8\ConsoleApplication8.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:prompt Test5.c
+         Test5.c
+     1>h:\sunrin\programming\consoleapplication8\consoleapplication8\test5.c(10): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+     1>h:\sunrin\programming\consoleapplication8\consoleapplication8\test5.c(25): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+         c:\program files (x86)\windows kits\10\include\10.0.10150.0\ucrt\conio.h(452): note: see declaration of 'getch'
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\Sunrin\Programming\ConsoleApplication8\Debug\ConsoleApplication8.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"H:\Sunrin\Programming\ConsoleApplication8\Debug\ConsoleApplication8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\Sunrin\Programming\ConsoleApplication8\Debug\ConsoleApplication8.lib" /MACHINE:X86 Debug\Test5.obj
+         ConsoleApplication8.vcxproj -> H:\Sunrin\Programming\ConsoleApplication8\Debug\ConsoleApplication8.exe
+     1>Done Building Project "H:\Sunrin\Programming\ConsoleApplication8\ConsoleApplication8\ConsoleApplication8.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.33
