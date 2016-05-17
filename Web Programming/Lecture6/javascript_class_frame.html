@@ -1,0 +1,195 @@
+<!-- 자바스크립트 수업을 위한 html파일 입니다. 3차시동안 수업을 듣고 이 파일에 실습을 해주시기 바랍니다. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>
+		웹 프로그래밍 - 자바스크립트
+	</title>
+	<link href='https://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
+	<style>
+	.main_title{
+		background-color: #79BFC0;
+		padding: 50px 50px 50px 50px;
+	}
+	h1{
+		font-family: 'Sigmar One', cursive;
+		color: #ffffff;
+		font-size: 50px;
+	}
+	ul{
+		float: right;
+		overflow: hidden;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	li{
+		display: inline;
+		overflow: hidden;
+		margin: 0 0 0 0 ;
+		padding: 0 0 0 0;
+		border: 0;
+	}
+	a{
+		text-decoration: none;
+		color: #ffffff;
+	}
+	a:hover{
+		color: #000000;
+		font-weight: bold;
+	}
+	textarea{
+		width: 500px;
+		height: 100px;
+		padding: 2px 2px 2px 2px;
+        text-align: left;
+        border: #888888 1px solid;
+        background-color: #EEEEEE;
+	}
+	</style>
+</head>
+<body>
+<header id="header">
+	<div class="main_title" id="main_title">
+		<h1>Java Script</h1>
+		<ul class="menu">
+			<li class="class_1" id="class_1"><a href="#">1차시</a></li>
+			<li class="class_2" id="class_2"><a href="#">2차시</a></li>
+			<li class="class_3" id="class_3"><a href="#">3차시</a></li>
+		</ul>
+	</div>
+</header>
+<div id="container">
+	<div id="first_class">
+		<h2>1차시</h2>
+		<div id="prectice1">
+			<h3>실습 1: 자바스크립트 삽입해보기</h3>
+			<textarea id="prectice_1_text" disabled="disabled"></textarea>
+		</div>
+		<br>
+		<div id="prectice2">
+			<h3>실습 2: 변수 선언하기</h3>
+			<textarea id="prectice_2_text" disabled="disabled"></textarea>
+		</div>
+		<br>
+		<div id="prectice3">
+			<h3>실습 3: 데이터 유형 비교하기</h3>
+			<textarea id="prectice_3_text" disabled="disabled"></textarea>
+		</div>
+		<br>
+	</div>
+	<hr>
+		<br>
+	<div id="second_class">
+		<h2>2차시</h2>
+		<div id="prectice4">
+			<h3>실습 4: 비교 연산자 사용하기</h3>
+			<textarea id="prectice_4_text2" disabled="disabled"></textarea>
+		</div>
+		<br>
+		<div id="prectice5">
+			<h3>실습 5: 대화상자 만들기</h3>
+			<input type="button" value="경고창" onclick="dialog(1)"/>
+			<input type="button" value="확인창" onclick="dialog(2)"/>
+			<input type="button" value="프롬프트창" onclick="dialog(3)"/><br><br>
+			<img id="prectice5_img" src="http://www.nztoday.net/news/photo/201405/580_311_0846.jpg" width="300" height="300"><br>
+			<!-- http://cfile30.uf.tistory.com/image/217F5C4B571DEB641CCE7B -->
+			<textarea id="prectice_5_text" disabled="disabled"></textarea>
+		</div>
+		<br>
+		<div id="prectice6">
+			<h3>실습 6: 시간에 따라서 인사말 바꾸기</h3>
+			<textarea id="prectice_6_text" disabled="disabled"></textarea>
+		</div>
+		<div id="prectice7">
+			<h3>실습 7: 369 게임</h3>
+			<textarea id="prectice_7_text" disabled="disabled"></textarea>
+		</div>
+		<br>
+	</div>
+	<hr>
+		<br>
+	<div id="third_class">
+		<h2>3차시</h2>
+		<div id="prectice8">
+			<h3>실습 8: 덧셈 프로그램 만들기</h3>
+			<input type="button" value="덧셈하기"/><br>
+			<textarea id="prectice_8_text" disabled="disabled"></textarea>
+		</div>
+		<br>
+		<div id="prectice9">
+			<h3>실습 9: 문서 색 바꾸기</h3>
+			<input type="button" value="green"/>
+			<input type="button" value="yellow"/>
+			<input type="button" value="white"/>
+		</div>
+		<br>
+		<div id="prectice10">
+			<h3>실습 10: 이벤트 핸들러와 함수 응용하기</h3>
+			<img id="prectice_10_photo" src="http://www.cats.org.uk/uploads/images/pages/photo_latest14.jpg" 
+			width="300" height="300" onmouseover="photo_over()" onmouseout="photo_out()">
+		</div>
+		<br>
+	</div>
+</div>
+    
+	<script type="text/javascript">
+        document.getElementById('prectice_1_text').value = "Starting JS";
+        
+        var name = "Sunrin";
+        name = "LOLWUT";
+        var subject = "Web Programming", language = "JS";
+        document.getElementById('prectice_2_text').value = "My name is " + name + ". " + "I teach " + language + " in " + subject + ".";
+        
+        var a,b,c,x,y,z;
+        a = 5;
+        b = "20";
+        c = 0.5;
+        x = a + 1;
+        y = b + 1;
+        z = c * c;
+        document.getElementById('prectice_3_text').value = a + " plus 1 is " + x + "\n" + b + " plus 1 is " + y + "\n" + c + " square is " + z;
+        
+        var A,B,C,D;
+        A = (5 == 5.00);
+        B = ("me" == "men");
+        C = (16 <= "16");
+        D = ("Iron Man" > "Captain America");
+        document.getElementById('prectice_4_text2').value = A + "\n" + B + "\n" + C + "\n" + D;
+        
+        function dialog(num){
+            switch(num){
+                case 1:{
+                    alert("Alert Window.");
+                    break;
+                }
+                case 2:{
+                    var reply = confirm("Select Window.");
+                    var img_src = "http://cfile30.uf.tistory.com/image/217F5C4B571DEB641CCE7B";
+                    if(reply == true) document.getElementById('prectice5_img').src = img_src;
+                    break;
+                }
+                case 3:{
+                    var yourName = prompt("Enter your name", "Christiano Ronaldo");
+                    document.getElementById('prectice_5_text').value = yourName;
+                    break;
+                }
+            }
+        }
+        
+        var today = new Date();
+        current = 1;
+        var current = today.getHours();
+        if (current > 7 && current < 12)
+            document.getElementById('prectice_6_text').value = "Good morning, m8!";
+        else if (current >= 12 && current < 14)
+            document.getElementById('prectice_6_text').value = "Be sure to eat lunch, m8!";
+        else if (current >= 14 && current < 18)
+            document.getElementById('prectice_6_text').value = "Get some coffee, m8!";
+        else
+            document.getElementById('prectice_6_text').value = "Have a good night, m8!";
+    </script>
+    
+</body>
+</html>
