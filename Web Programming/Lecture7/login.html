@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Logon</title>
+</head>
+<body>
+<h1>Login Screen</h1>
+
+<table>
+    <tr>
+        <td>
+            Username :
+        </td>
+        <td>
+            <form>
+                <input type="text" id="un">
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Password :
+        </td>
+        <td>
+            <form>
+                <input type="password" id="pw">
+            </form>
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>
+            <button id="button" onclick="login()">
+                Login
+            </button>
+        </td>
+        <td>
+            <button id="alert" onclick="dialog()">
+                Login with dialog
+            </button>
+        </td>
+    </tr>
+</table>
+
+
+<p id="result">RESULT</p>
+
+<script>
+    var saved_pw = "admin";
+    var saved_un = "admin";
+    var pw, un;
+
+    function login() {
+        pw = document.getElementById("pw").value;
+        un = document.getElementById("un").value;
+
+        document.getElementById("result").style.display = "block";
+
+        if(un == saved_un){
+            if(pw == saved_pw){
+                document.getElementById("result").innerHTML = "Welcome back, " + un + ".";
+            } else{
+                document.getElementById("result").innerHTML = "Entered password doesn't match with username " + un + ".";
+            }
+        } else {
+            document.getElementById("result").innerHTML = "Entered username " + un + " doesn't exist.";
+        }
+    }
+    function dialog() {
+        un = prompt("Enter your username");
+        pw = prompt("Enter your password matching to " + un);
+
+        if(un == saved_un){
+            if(pw == saved_pw){
+                alert("Welcome back, " + un + ".");
+                pw = prompt("Enter your password matching to " + un + " again.");
+            } else {
+                alert("Entered password doesn't match with username " + un + ".");
+            }
+        } else {
+            alert("Entered username " + un + " doesn't exist.");
+            un = prompt("Entered username " + un + " doesn't exist." + " Enter your username again.");
+        }
+    }
+</script>
+<style>
+    #result{
+        display: none;
+    }
+    button{
+        padding : 10px;
+        margin : 10px;
+    }
+</style>
+</body>
+</html>

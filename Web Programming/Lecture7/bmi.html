@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BMI 계산기</title>
+</head>
+<body>
+<h1 class="entry-title">BMI(체질량지수) 계산기</h1>
+
+<table>
+    <tr>
+        <td>
+            키 :
+        </td>
+        <td>
+            <form>
+                <input type="text" id="height" name="height" placeholder="170">
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            몸무게 :
+        </td>
+        <td>
+            <form>
+                <input type="text" id="weight" name="weight" placeholder="70">
+            </form>
+        </td>
+    </tr>
+</table>
+
+<button id="button" onclick="calculate()">
+    계산하기
+</button>
+
+<p id="result">RESULT</p>
+
+<p>위에서 계산한 BMI를 아래의 기준과 비교하여 자신의 상태를 판단해 보세요.</p>
+
+<table border="1">
+    <tr>
+        <td class="column-1">BMI</td><td class="column-2">상태</td>
+    </tr>
+    <tr id="cls1">
+        <td>18.5 미만</td><td>체중부족</td>
+    </tr>
+    <tr id="cls2">
+        <td>18.5 ~ 22.9</td><td>정상</td>
+    </tr>
+    <tr id="cls3">
+        <td>23.0 ~ 24.9</td><td>과체중</td>
+    </tr>
+    <tr id="cls4">
+        <td>25.0 이상</td><td>비만</td>
+    </tr>
+</table>
+<script>
+    function calculate() {
+        var weight = parseInt(document.getElementById("weight").value);
+        var height = parseInt(document.getElementById("height").value);
+        var bmi = weight/((height / 100)*(height / 100));
+
+        document.getElementById("result").style.display = "block";
+        document.getElementById("result").innerHTML = "Your BMI is " + String(bmi) + ".";
+
+        if(bmi<18.5){
+            document.getElementById("cls1").style.backgroundColor = "LightGrey";
+            document.getElementById("cls2").style.backgroundColor = "White";
+            document.getElementById("cls3").style.backgroundColor = "White";
+            document.getElementById("cls4").style.backgroundColor = "White";
+        } else if(bmi >= 18.5 && bmi <= 22.9){
+            document.getElementById("cls1").style.backgroundColor = "White";
+            document.getElementById("cls2").style.backgroundColor = "LightGrey";
+            document.getElementById("cls3").style.backgroundColor = "White";
+            document.getElementById("cls4").style.backgroundColor = "White";
+        } else if(bmi >= 23.0 && bmi <= 24.9){
+            document.getElementById("cls1").style.backgroundColor = "White";
+            document.getElementById("cls2").style.backgroundColor = "White";
+            document.getElementById("cls3").style.backgroundColor = "LightGrey";
+            document.getElementById("cls4").style.backgroundColor = "White";
+        } else if(bmi >= 25.0){
+            document.getElementById("cls1").style.backgroundColor = "White";
+            document.getElementById("cls2").style.backgroundColor = "White";
+            document.getElementById("cls3").style.backgroundColor = "White";
+            document.getElementById("cls4").style.backgroundColor = "LightGrey";
+        }
+    }
+</script>
+<style>
+    td{
+        padding : 4px;
+    }
+    #result{
+        display: none;
+    }
+    #button{
+        padding : 5px;
+        margin : 10px;
+    }
+</style>
+</body>
+</html>

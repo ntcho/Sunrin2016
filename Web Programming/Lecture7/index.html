@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        var box = 100;
+        box1 = 30;
+        var s;
+        var t = "Calculated result : ";
+        document.write(box, "<br/>");
+        document.write(typeof t, "<br/>");
+        document.write(t, "<br/>");
+        s = box + box1;
+        document.write(box, "+", box1, "=", s, "<br/>");
+        s = box - box1;
+        document.write(box, "-", box1, "=", s, "<br/>");
+        s = box * box1;
+        document.write(box, "*", box1, "=", s, "<br/>");
+        s = box / box1;
+        document.write(box, "/", box1, "=", s, "<br/>");
+
+        var name = "Name is"
+            , name1 = "Nathan Cho"
+            , school = "Attending school is"
+            , school1 = "Sunrin Internet Highschool";
+
+        document.write(name, "<br/>", name1, "<br/>", school, "<br/>", school1, "<br/>");
+        document.write("Connecting all words above : ", "<br/>");
+        document.write(name + name1 + school + school1);
+        document.write("<br/>");
+        
+        function test() {
+            var input = document.getElementById('input').value;
+            var str = "";
+
+            if (input == "") {
+                alert("값을 입력하세요")
+            }else {
+
+                for (var i = 0; i < input; i++) {
+                    for (var j = 0; j < i+1; j++) {
+                        str += "*"
+                    }
+                    str += "\n"
+                }
+
+                alert(str)
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input id="input">
+    <input type="button" value="별찍기" onclick="test()">
+</body>
+
+</html>

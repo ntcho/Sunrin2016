@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hyperlink</title>
+    <script>
+        var site = prompt("Enter Google, Naver, Daum, Yahoo.");
+        var url;
+
+        switch(site){
+            case "google":
+            case "Google": url="www.google.com"; break;
+            case "naver" :
+            case "Naver" : url="www.naver.com"; break;
+            case "daum"  :
+            case "Daum"  : url="www.daum.net"; break;
+            case "yahoo" :
+            case "Yahoo" : url="www.yahoo.com"; break;
+
+            default : url="www.sunrint.hs.kr"; break;
+        }
+
+        if(url) location.href="http://" + url;
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
