@@ -3,18 +3,33 @@
 int main() {
 	char str[100];
 	int i = 0;
-	int end = 0;
-	int minus;
+	int count = 0;
+	int move = 0;
 
 	printf("Enter string : ");
 	fgets(str, 100, stdin);
 
-	for (i = 0; str[i] != '\0'; i++);
-
 	printf("String without number : ");
-	while (str[i] != '\0') {
+	/*
+	count = sizeof(str) / sizeof(int);
 
+	for (i = 0; i < count; i++){
+		if (!(str[i] >= '0' && str[i] <= '9')) {
+			str[i] = str[i + 1];
+			move++;
+		}
+		printf("%c", str[i]);
 		i++;
+	}
+	for (i = 0; i <= move; i++) {
+		str[move - i] = '\0';
+	}
+	*/
+	while (str[i] != '\0') {
+		if (!(str[i] >= '0' && str[i] <= '9')) {
+			str[i] = str[i + 1];
+			move++;
+		}
 	}
 	printf("\n");
 
