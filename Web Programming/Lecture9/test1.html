@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script type="text/javascript">
+        var tv = new Object();
+
+        tv.width = 160;
+        tv.height = 90;
+        tv.weight = 5;
+        tv.color = "white";
+
+        document.write("TV dimension : " + tv.width + "(cm) X " + tv.height + "(cm)<br>");
+        document.write("TV Weight : " + tv.weight + "(kg), TV Color : " + tv.color + "<br>");
+
+        tv.off = function() {
+            document.write("TV Power State : off <br>");
+        }
+
+        tv.off();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

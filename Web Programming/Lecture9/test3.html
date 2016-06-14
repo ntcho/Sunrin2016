@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script type="text/javascript">
+        var d = new Date();
+        var year = d.getFullYear();
+        var date = new Date(year, 11, 31);
+        var dday = date-d;
+        var total = Math.ceil(dday/(60*1000*60*24));
+        document.write("Day left to new year : " + total);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

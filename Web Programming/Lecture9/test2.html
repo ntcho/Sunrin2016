@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script type="text/javascript">
+        var d = new Date();
+        //2002.05.31
+        //Should remove one month cuz of array limits
+        var wc = new Date(2002,4,31);
+        var dayInString;
+
+        document.write(d + "<br>");
+        document.write(dayString(d.getDay()) + "<br>");
+        document.write(dayString(wc.getDay()) + "<br>");
+
+        function dayString(date) {
+            var daySt;
+            switch(date){
+                case 1: daySt = "Monday"; break;
+                case 2: daySt = "Tuesday"; break;
+                case 3: daySt = "Wednesday"; break;
+                case 4: daySt = "Thursday"; break;
+                case 5: daySt = "Friday"; break;
+                case 6: daySt = "Saturday"; break;
+                case 7: daySt = "Sunday"; break;
+                default: daySt = "Error"; break;
+            }
+            return daySt;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

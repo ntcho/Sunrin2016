@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script type="text/javascript">
+        var d = new Date();
+        var yearCal = d.getFullYear();
+        var date = new Date(yearCal, 11, 31);
+        var dday = date - d;
+        var total = Math.ceil(dday/(60*1000*60*24));
+
+        var day, month, year;
+        do{
+            year = prompt("Enter year you want to calculate.", d.getFullYear());
+        } while(day*(60*1000*60*24) >= d.getTime());
+        do{
+            month = prompt()
+        }
+
+        document.write("Day left to "+year+"/"+month+"/"+day+" : "+total);
+        //fucked! Needs debugging and algorithm change.
+    </script>
+</head>
+<body>
+
+</body>
+</html>
