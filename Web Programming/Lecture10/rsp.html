@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" >
+    <title>Rock Scissor Paper</title>
+    <script type="text/javascript">
+        var user = prompt("Select rsp", "Rock");
+        var userText = user;
+        var userImg;
+
+        switch(user){
+            case "Rock":
+            case "rock": user=0; userImg = "<br><img src='" + "image/rock.png'/>"; break;
+            case "Scissor":
+            case "scissor": user=1; userImg = "<br><img src='" + "image/scissors.png'/>"; break;
+            case "Paper":
+            case "paper": user=2; userImg = "<br><img src='" + "image/paper.png'/>"; break;
+        }
+
+        var com = Math.floor(Math.random() * 3);
+        var comText;
+        var comImg;
+
+        switch(com){
+            case 0: comText = "Rock"; comImg = "<br><img src='" + "image/rock.png'/>"; break;
+            case 1: comText = "Scissor"; comImg = "<br><img src='" + "image/scissors.png'/>"; break;
+            case 2: comText = "Paper"; comImg = "<br><img src='" + "image/paper.png'/>"; break;
+        }
+
+        if(user == com){
+            document.write(" You : " + userText + userImg + "<br> Cpu : " + comText + comImg + "<br><br>Duel!");
+        } else {
+            if(user + 1 == com || user - 2 == com){
+                document.write(" You : " + userText + userImg + "<br> Cpu : " + comText + comImg + "<br><br>You Win!");
+            } else{
+                document.write(" You : " + userText + userImg + "<br> Cpu : " + comText + comImg + "<br><br>You Lose!");
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
