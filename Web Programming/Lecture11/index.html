@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>String</title>
+    <script type="text/javascript">
+        var s = "Hello Thank you Good luck to you";
+
+        document.write(s.charAt(16),"<br>");
+        //Return char location
+        document.write(s.indexOf("you"),"<br>");
+        //Return string start location starting from start of string
+        document.write(s.indexOf("you", 16),"<br>");
+        //Return string start location starting from start of string
+        document.write(s.lastIndexOf("you"),"<br>");
+        //Return string start location starting from end of string
+        document.write(s.match("luck"),"<br>");
+        document.write(s.search("luck"),"<br>");
+        document.write(s.substring(6, 12),"<br>");
+        //Print string from 6 to 12
+        document.write(s.replace("you", "me"),"<br>");
+        //Replace String value
+        document.write(s.toLowerCase(),"<br>");
+        //Switch uppercase to lowercase
+        document.write(s.toUpperCase(),"<br>");
+        //Switch lowercase to uppercase
+        document.write(s.length(), "<br>");
+        //String Length
+
+        var array = s.split("");
+        //String to array
+
+        document.write(array[0], "<br>");
+        document.write(array[4], "<br>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Enter information</title>
+    <script type="text/javascript">
+        var name = prompt("Enter your name below", "Rick Astley");
+
+        while (name == null){
+            name = prompt("Enter your matching name below", "Never gonna give you up");
+        }
+
+        document.write("Name : " + name + "<br>");
+        
+        var number = prompt("Enter your number below", "010-1234-5678");
+
+        while (number == null){
+            number = prompt("Enter your matching number below", "010-1234-5678");
+
+            //Explosion
+            /*
+
+            var type;
+            var count = 0;
+
+            for(var i = 0; i < number.length(); i++){
+                var array = number.split("");
+                if(array[i] == '-'){
+                    ++count;
+                }
+                number = number.replace("-", "");
+            }
+
+            if(count == 1){
+                type = "ID Number";
+                document.write(type + ":" + number.substring(0, 5) + "-*******");
+            } else if (count == 2){
+                type = "Phone Number";
+                document.write(type + ":" + number.substring(0, 2) + "-" + number.substring(3, 7) + "-****");
+            } else {
+                if(number.length() == 11){
+                    type = "ID Number";
+                    document.write(type + ":" + number.substring(0, 5) + "-*******");
+                } else if(number.length() == 13) {
+                    type = "Phone Number";
+                    document.write(type + ":" + number.substring(0, 2) + "-" + number.substring(3, 7) + "-****");
+                }
+                type = null;
+                document.write("String error");
+            }
+            */
+        }
+
+        document.write("Number : " + number.substring(0, number.length-4) + "****" + "<br>");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
