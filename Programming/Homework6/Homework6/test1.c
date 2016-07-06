@@ -7,7 +7,7 @@ void main() {
 
 	printf("Printing the elements of array : ");
 	for (i = 0; i < sizeof(arr) / sizeof(int); i++) {
-		printf("%-5d", arr[i]);
+		printf("%-3d", arr[i]);
 	}
 	max = min = arr[0];
 

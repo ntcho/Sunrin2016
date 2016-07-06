@@ -10,23 +10,24 @@ void printArr(int a[], int size) {
 void main() {
 	int arr[] = {1,2,3,4,5,6,7,8,9,10};
 	int tmp;
-	int i;
+	int i, size = 10;
 
 	printf("Array before move : ");
-	printArr(arr, (sizeof(arr) / sizeof(int)));
+	printArr(arr, size);
 
-	for (i = 0; i < (sizeof(arr) / sizeof(int)); i++) {
-		tmp = arr[0];
-		if (i == 10 - 1) {
-			arr[10 - 1] = tmp;
+	tmp = arr[0];
+
+	for (i = 0; i < 10; i++) {
+		if (i == 9) {
+			arr[i] = tmp;
 		}
 		else {
-			arr[i] == arr[i + 1];
+			arr[i] = arr[i + 1];
 		}
 	}
 
-	printf("\nResult\n");
+	printf("\n\nResult\n\n");
 	printf("Array after move : ");
-	printArr(arr, (sizeof(arr) / sizeof(int)));
-
+	printArr(arr, size);
+	printf("\n");
 }
