@@ -24,5 +24,14 @@
     <ClCompile Include="test03_extern.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="test03_extern1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test03_extern2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test03_extern0.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

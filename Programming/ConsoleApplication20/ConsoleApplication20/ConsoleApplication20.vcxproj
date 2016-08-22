@@ -148,7 +148,12 @@
     <ClCompile Include="test02_static.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="test03_extern.c" />
+    <ClCompile Include="test03_extern.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="test03_extern0.c" />
+    <ClCompile Include="test03_extern1.c" />
+    <ClCompile Include="test03_extern2.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
