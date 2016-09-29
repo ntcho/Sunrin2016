@@ -2,8 +2,20 @@
 
 //09_3_Pointer(String)_File.hwp look for it
 
-int str_chnum(const char *str, char c) {
+char *len(char *str, int n) {
+	while (*str != '\0') {
+		str++;
+	}
 
+	while (n-- >= 0) {
+		str--;
+	}
+
+	return str;
+}
+
+void print(char *str) {
+	printf("b = %s", str);
 }
 
 void main() {
@@ -16,5 +28,5 @@ void main() {
 	printf("Enter integer : ");
 	scanf("%d", &n);
 
-	print((?));
+	print(len(str, n));
 }

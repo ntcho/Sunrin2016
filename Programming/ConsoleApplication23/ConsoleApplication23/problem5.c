@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 //09_3_Pointer(String)_File.hwp look for it
-//Blowed up
 
 char *str_ncat(char *s1, const char *s2, int n) {
 	char *tmp = s1;
@@ -10,7 +9,7 @@ char *str_ncat(char *s1, const char *s2, int n) {
 	}
 	while (n--) {
 		if (!(*s1++ = *s2++)) {
-			break;	
+			break;
 		}
 	}
 	*s1 = '\0';
@@ -20,7 +19,7 @@ char *str_ncat(char *s1, const char *s2, int n) {
 
 void main() {
 	char str1[] = "asdf1234";
-	char str2[] = "qwer5678";
+	char str2[] = "qwer5678qwer5678";
 
 	char *p;
 	p = str_ncat(str1, str2, 10);

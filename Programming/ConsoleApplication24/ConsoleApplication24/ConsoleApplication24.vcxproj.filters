@@ -27,35 +27,10 @@
     <ClCompile Include="test4.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="problem1.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="problem2.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="problem3.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="problem4.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="problem5.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="problem6.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="problem7.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="problem8.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="problem9.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="problem10.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="book.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
