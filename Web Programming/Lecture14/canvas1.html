@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="512" height="512" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML5 canvas tag.</canvas>
+    <script>
+        var c = document.getElementById("canvas");
+        var ctx = c.getContext("2d");
+        var outerPoint = [
+            [137,187],
+            [137,215],
+            [256,283],
+            [329,242],
+            [329,296],
+            [256,339],
+            [184,298],
+            [138,324],
+            [256,393],
+            [376,325],
+            [376,188],
+            [256,119]
+        ];
+
+        var innerPoint = [
+            [208,201],
+            [256,173],
+            [304,201],
+            [256,228]
+        ];
+
+        var jsOuter = [
+            [426,423],
+            [496,423],
+            [491,495],
+            [462,503],
+            [433,495]
+        ]
+
+        var jsInner = [
+            [481,451],
+            [481,433],
+            [445,433],
+            [442,464],
+            [472,465],
+            [472,476],
+            [461,479],
+            [452,476],
+            [451,470],
+            [442,470],
+            [443,484],
+            [461,488],
+            [480,483],
+            [482,456],
+            [451,456],
+            [453,443],
+            [472,442],
+            [473,451]
+        ]
+
+        var jsMiddle = [
+            [461,429],
+            [490,429],
+            [485,490],
+            [461,497],
+            [485,490],
+            [490,429]
+        ]
+
+        drawArray(outerPoint, 2);
+        drawArray(innerPoint, 2);
+        drawArray(jsInner, 1);
+        drawArray(jsMiddle, 0.5);
+        drawArray(jsOuter, 1);
+
+        function drawArray(array, lineWidth) {
+            for(var i = 0; i < array.length; i++) {
+                ctx.moveTo(array[i][0], array[i][1]);
+                ctx.lineWidth = lineWidth;
+                if(i == array.length - 1) {
+                    ctx.lineTo(array[0][0], array[0][1]);
+                } else {
+                    ctx.lineTo(array[i + 1][0], array[i + 1][1]);
+                }
+                ctx.stroke();
+            }
+        }
+    </script>
+</body>
+</html>
