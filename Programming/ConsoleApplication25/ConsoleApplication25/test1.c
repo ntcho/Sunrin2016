@@ -1,4 +1,14 @@
-#include "book.h"
+#include <stdio.h>
+
+struct member {
+	int  no;
+	char name[30];
+	int pro;
+	int os;
+	int web;
+	float avg;
+};
+
 struct member tmp;
 #define SWAP(a,b) {tmp = a; a = b; b = tmp;}
 
@@ -74,6 +84,6 @@ void main() {
 	};
 	printAllMember(web_member, 4);
 	selectionSort(web_member, 4);
-	printf("Print sorted member\n\n");
+	printf("Print sorted members\n\n");
 	printAllMember(web_member, 4);
 }

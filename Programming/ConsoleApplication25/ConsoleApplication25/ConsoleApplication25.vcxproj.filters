@@ -18,10 +18,8 @@
     <ClCompile Include="test1.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="book.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClCompile Include="test2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
