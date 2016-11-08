@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shooting balls</title>
+    <style>
+        canvas {
+            margin: 10px;
+            border: 1px solid black;
+            background-color: #7c97ff;
+        }
+
+    </style>
+    <script type="text/javascript">
+        var context;
+        var velocity;
+        var angle;
+        var cal; // Calculate ball speed
+        var leri = 0, updown = 0; // Goal post movement
+        var ballVx;
+        var ballVy;
+        var ballX = 10;
+        var ballY = 250;
+        var ballRadius = 10;
+        var score = 0;
+        var time = 30, one = 0; // Time limit
+        var launchcount = 30; // Shot limit
+        var goalPostX = 800, goalPostY = 60; // Moving post 1
+        var goalPost2X = 300, goalPost2Y = 60; // Moving post 2
+
+        var image = new Image();
+        image.src = "lawn.png";
+        var backImage = new Image();
+        backImage.src = "net.png";
+
+        function drawBall() {
+            context.beginPath();
+            context.arc(ballX, ballY, ballRadius, 0, 2.0 * Math.PI, true);
+            context.fillStyle = "#FFFFFF";
+            context.fill();
+        }
+
+        function goalBall() {
+            context.beginPath();
+            context.arc(100, 100, ballRadius, 0, 2.0 * Math.PI, true);
+            context.fillStyle = "blue";
+            context.fill();
+
+        }
+
+        function goal2Ball() {
+            context.beginPath();
+            context.arc(goalPost2X, goalPost2Y, ballRadius, 0, 2.0 * Math.PI, true);
+            context.fillStyle = "blue";
+            context.fill();
+        }
+
+        function drawBackground() {
+            context.drawImage(image, 0, 575);
+            context.drawImage(image, 500, 575);
+            context.drawImage(backImage, goalPostX, goalPostY);
+            context.drawImage(backImage, goalPost2X, goalPost2Y);
+        }
+
+        function draw() {
+            context.clearRect(0, 0, 1000, 600);
+            drawBall();
+            drawBackground();
+        }
+
+        function init() {
+            ballX = 15;
+            ballY = 565;
+            ballRadius = 10;
+            context = document.getElementById('canvas').getContext('2d');
+            draw();
+        }
+
+        var goalPost;
+
+        function start() {
+            if (!(launchcount == 0) && !(time == -1)) {
+                init();
+                launchcount--;
+                document.getElementById("count").innerHTML = "Shots left = " + launchcount;
+
+                velocity = Number(document.getElementById("velocity").value);
+                angle = Number(document.getElementById("angle").value);
+                var angleR = angle * Math.PI / 180;
+
+                ballVx = velocity * Math.cos(angleR);
+                ballVy = -velocity * Math.sin(angleR);
+                draw();
+
+                if (one == 0) {
+                    setInterval(second, 1000);
+                    goalPost = setInterval(goalPostMove, 10);
+                    setInterval(calculate, 20);
+                    one++;
+                }
+
+                cal = setInterval(calculate, 30);
+                return false;
+            }
+        }
+
+        function second() {
+            if (time <= 0) time = 0;
+            time--;
+            document.getElementById("time").innerHTML = "Time left (seconds) = " + time;
+            if (time == -1) {
+                document.getElementById("time").innerHTML = "Time over.";
+                document.getElementById("score").innerHTML = "<b>Final score = " + score + "</b>";
+                clearInterval(goalPost);
+            } else if (launchcount == 0) {
+                document.getElementById("time").innerHTML = "All shots were used.";
+                document.getElementById("score").innerHTML = "<b>Final score = " + score + "</b>";
+                clearInterval(goalPost);
+            }
+        }
+
+        function goalPostMove() {
+            if (updown == 0) {
+                goalPostY++;
+                if (goalPostY > 375) {
+                    updown = 1;
+                }
+            }
+            if (updown == 1) {
+                if (goalPostY < 75) {
+                    updown = 0;
+                }
+                goalPostY--;
+            }
+            if (leri == 0) {
+                goalPost2X++;
+                if (goalPost2X > 500) {
+                    leri = 1;
+                }
+            }
+            if (leri == 1) {
+                if (goalPost2X < 75) {
+                    leri = 0;
+                }
+                goalPost2X--;
+            }
+        }
+
+        function calculate() {
+            ballVy = ballVy + 1.98;
+
+            ballX = ballX + ballVx;
+            ballY = ballY + ballVy;
+
+            if ((ballX >= goalPostX) && (ballX <= goalPostX + 30) && (ballY >= goalPostY) && (ballY <= goalPostY + 150)) {
+                ballX = 10000;
+                ballY = 10000;
+                goalBall();
+                score++;
+                document.getElementById("score").innerHTML = "Score = " + score;
+                clearInterval(cal);
+            }
+            if ((ballX >= goalPost2X) && (ballX <= goalPost2X + 30) && (ballY >= goalPost2Y) && (ballY <= goalPost2Y + 150)) {
+                ballX = 10000;
+                ballY = 10000;
+                goal2Ball();
+                score++;
+                document.getElementById("score").innerHTML = "Score = " + score;
+                clearInterval(cal);
+            }
+            if (ballY >= 600 || ballY < 0) {
+                clearInterval(cal);
+            }
+            draw();
+        }
+    </script>
+</head>
+<body onload="init();">
+<canvas id="canvas" width="1000" height="600"></canvas>
+<div id="control">
+    Velocity : <input id="velocity" value="50" type="number" min="0" max="100" step="1"/>
+    <br>
+    Angle : <input id="angle" value="45" type="number" min="0" max="90" step="1"/>
+    <br>
+    <div id="count">Shots left = 30</div>
+    <div id="time">Time left (seconds) = 30</div>
+    <div id="score">Score = 0</div>
+    <br>
+    <button style="padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px; "
+            onclick="start();">Launch
+    </button>
+</div>
+</body>
+</html>
