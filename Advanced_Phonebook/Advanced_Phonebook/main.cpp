@@ -222,7 +222,6 @@ int main()
 
 	while (1)
 	{
-		//ASCII ART!
 		printf("[[ ADVANCED PHONEBOOK ]]\n");
 		printf("----------\n");
 		//MENU
