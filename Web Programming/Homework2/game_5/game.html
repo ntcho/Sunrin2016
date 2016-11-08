@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+            background-color: skyblue;
+        }
+
+    </style>
+    <script type="text/javascript">
+        var context;
+        var velocity;
+        var angle;
+        var cal; // calculate 속도 오류 조절
+        var leri=0 ,updown=0; // 골대 움직임
+        var ballV;
+        var ballVx;
+        var ballVy;
+        var ballX =10;
+        var ballY = 250;
+        var ballRadius = 10;
+        var score= 0;
+        var seconds, time = 60, one=0; // 시간 제한
+        var launchcount = 10 // 발사 횟수 제한
+        var goldaX=800, goldaY=60; // 움직 골대
+        var golda2X=300, golda2Y=0,n=0; // 움직 골대2
+       
+        var stickyBallX = new Array(); 
+        var stickyBallY= new Array();  //전역 윈도우 변수들 붙은 공들
+        
+        
+        var image = new Image();
+        image.src = "lawn.png";
+        var backimage = new Image();
+        backimage.src = "net.png";
+
+        function drawBall() {
+            context.beginPath();
+            context.arc(ballX,ballY,ballRadius,0,2.0*Math.PI,true);
+            context.fillStyle = "red";
+            context.fill();
+        }
+        
+
+        function goalBall() {
+            context.beginPath();
+            context.arc(stickyBallX[0],stickyBallY[0],ballRadius,0,2.0*Math.PI,true);
+            context.fillStyle = "blue";
+            context.fill();
+          
+        }
+        
+         function goalBall2() {
+            context.beginPath();
+            context.arc(stickyBallX[1],stickyBallY[1],ballRadius,0,2.0*Math.PI,true);
+            context.fillStyle = "blue";
+            context.fill();
+             context.clearRect(stickyBallX[0],stickyBallY[0],ballRadius,0,2.0*Math.PI,true);
+        }
+        
+        function goalBall3() {
+            context.beginPath();
+            context.arc(stickyBallX[2],stickyBallY[2],ballRadius,0,2.0*Math.PI,true);
+            context.fillStyle = "blue";
+            context.fill();
+        }
+        
+        function goalBall4() {
+            context.beginPath();
+            context.arc(stickyBallX[3],stickyBallY[3],ballRadius,0,2.0*Math.PI,true);
+            context.fillStyle = "blue";
+            context.fill();
+        }
+        
+        function goalBall5() {
+            context.beginPath();
+            context.arc(stickyBallX[4],stickyBallY[4],ballRadius,0,2.0*Math.PI,true);
+            context.fillStyle = "blue";
+            context.fill();
+        }
+        
+         function goalBall6() {
+            context.beginPath();
+            context.arc(stickyBallX[5],stickyBallY[5],ballRadius,0,2.0*Math.PI,true);
+            context.fillStyle = "blue";
+            context.fill();
+        }
+        
+         function goalBall7() {
+            context.beginPath();
+            context.arc(stickyBallX[6],stickyBallY[6],ballRadius,0,2.0*Math.PI,true);
+            context.fillStyle = "blue";
+            context.fill();
+        }
+        
+         function goalBall8() {
+            context.beginPath();
+            context.arc(stickyBallX[7],stickyBallY[7],ballRadius,0,2.0*Math.PI,true);
+            context.fillStyle = "blue";
+            context.fill();
+        }
+        
+         function goalBall9() {
+            context.beginPath();
+            context.arc(stickyBallX[8],stickyBallY[8],ballRadius,0,2.0*Math.PI,true);
+            context.fillStyle = "blue";
+            context.fill();
+        }
+        
+        function goalBall10() {
+            context.beginPath();
+            context.arc(stickyBallX[9],stickyBallY[9],ballRadius,0,2.0*Math.PI,true);
+            context.fillStyle = "blue";
+            context.fill();
+        }
+        
+        function drawBackground(){
+            context.drawImage(image, 0, 575);
+            context.drawImage(image, 500, 575);
+            context.drawImage(backimage, goldaX,  goldaY);
+            context.drawImage(backimage, golda2X, golda2Y);
+        }
+
+        function draw() {
+            context.clearRect(0,0,1000,600);
+            drawBall();
+            drawBackground();
+           goalBall();
+           goalBall2()
+         goalBall3()
+           goalBall4()
+         goalBall5()
+         goalBall6()
+         goalBall7()
+         goalBall8()
+         goalBall9()
+         goalBall10()
+        }
+     
+        
+     
+        function init() {
+            ballX = 15
+            ballY = 565
+            ballRadius = 10
+            context = document.getElementById('canvas').getContext('2d');
+            draw();
+        }
+
+        function start() {
+            if(!(launchcount==0) &&  !(time == -1)) {
+            init();
+                launchcount--;
+            document.getElementById("count").innerHTML = "발사 횟수 = " + launchcount;
+
+            velocity = Number(document.getElementById("velocity").value)
+            angle = Number(document.getElementById("angle").value);
+            var angleR = angle * Math.PI / 180
+
+            ballVx = velocity * Math.cos(angleR);
+            ballVy = -velocity * Math.sin(angleR);
+            draw();
+            if(one==0){
+            setInterval(second, 1000)
+            setInterval(goldamove, 10)
+            setInterval(calculate, 20)
+             one++;}
+            cal = setInterval(calculate, 30)
+            return false;}
+        }
+
+        function second(){
+            if(time<=0) time=0;
+            time--;
+            document.getElementById("time").innerHTML = "시간(초) = " + time;
+            if(time==-1 || launchcount==0){
+             document.getElementById("time").innerHTML = "시간 종료 또는 모두 발사 했습니다!"
+             document.getElementById("score").innerHTML = "<b>최종 점수 = " + score + "</b>"}
+        }
+        
+        function goldamove() {
+            
+            if(updown==0){
+             goldaY++; golda2Y++;
+                for(var i=0;i<=10;i++)
+                 stickyBallY[i]++;      
+                if(goldaY>375) updown=1;
+                 }
+            if(updown==1){
+                if(goldaY<75) updown=0;
+             goldaY-- ; golda2Y--;
+                for(var i=0;i<=10;i++)
+                 stickyBallY[i]--; }
+            
+                
+        }
+        
+
+        function calculate() {
+            ballVy = ballVy + 1.98;
+
+            ballX = ballX + ballVx;
+            ballY = ballY + ballVy;
+
+            if (((ballX >= goldaX) && (ballX <= goldaX+30) && (ballY >= goldaY) && (ballY <= goldaY+150)) ||
+               ((ballX >= golda2X) && (ballX <= golda2X+35) && (ballY >= golda2Y) && (ballY <= golda2Y+160)))
+                {
+                    
+                    stickyBallX[n]=ballX
+                    stickyBallY[n]=ballY
+                    
+                     ballX =10000;
+                     ballY =10000;
+                   
+                    score++; n++;
+                    document.getElementById("score").innerHTML = "점수 = " + score;
+                    clearInterval(cal);
+                }
+            if (ballY >= 600 || ballY < 0) {
+                
+                clearInterval(cal);
+            }
+            draw();
+        }
+    </script>
+</head>
+<body onload="init();">
+<canvas id="canvas" width="1000" height="600"></canvas>
+<div id="control">
+    속도<input id="velocity" value="50" type="number" min="0" max="100" step="1"/>
+    <br>
+    각도<input id="angle" value="45" type="number" min="0" max="90" step="1" />
+    <br>
+    <div id="count">발사 횟수 = 10</div>
+    <div id="time">시간(초) = 60</div>
+    <div id="score">점수 = 0</div>
+    <br>
+    <button style="padding: 10px" onclick="start();">발사</button>
+</div>
+</body>
+</html>
