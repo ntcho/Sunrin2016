@@ -161,7 +161,9 @@ void Search(char * Name)
 
 		if (strcmp(Name, temp->NameData) == 0)
 		{
-			printf("%s 님의 전화번호는 %s 입니다.\n", temp->NameData, temp->PhonenumberData); return;
+			printf("%s 님의 전화번호는 %s 입니다.\n", 
+				temp->NameData, temp->PhonenumberData); 
+			return;
 		}
 
 		else if (temp->next == NULL)
