@@ -55,7 +55,6 @@ void Add(char * name, char * phonenumber, char custom1[3][2][30])
 
 void Delete(char *phonenumber)
 {
-
 	if (head == NULL)
 		printf("지울 데이터가 없습니다.\n");
 
@@ -212,7 +211,6 @@ void SearchF(char * Name)
 
 int main()
 {
-
 	char phonenumber[15];
 	int input;
 	char name[15];
@@ -224,15 +222,18 @@ int main()
 
 	while (1)
 	{
+		//ASCII ART!
+		printf("[[ ADVANCED PHONEBOOK ]]\n");
 		printf("----------\n");
-		printf("|0:추가   ");
-		printf("1:제거\n");
-		printf("|2:보기   ");
-		printf("3:종료\n");
-		printf("|4:검색   \n");
-		printf("|5:즐겨찾기 추가\n");
-		printf("|6:즐겨찾기 보기\n");
-		printf("입력 :");
+		//MENU
+		printf("| 0:추가\n");
+		printf("| 1:제거\n");
+		printf("| 2:보기\n");
+		printf("| 3:종료\n");
+		printf("| 4:검색\n");
+		printf("| 5:즐겨찾기 추가\n");
+		printf("| 6:즐겨찾기 보기\n");
+		printf("선택 :");
 		scanf("%d", &input);
 
 		if (input == 0)
