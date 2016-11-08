@@ -128,11 +128,11 @@ void Look()
 						printf("%s", temp->custom1Data[i][j]);
 					else if (temp->custom1Data[i][j] == 0)
 					{
+						break;
 					}
 					printf("\n");
 				}
 			}
-
 			printf("\n");
 		}
 		printf("....................................\n");
@@ -512,12 +512,12 @@ int main()
 						printf("\n");
 					}
 					printf("....................................\n");
-				}
 				temp = temp->next;
 				if (temp == NULL)
 					break;
 				else
 					printf("\n");
+				}
 			}
 
 		}
