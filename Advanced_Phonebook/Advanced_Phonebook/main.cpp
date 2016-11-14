@@ -221,6 +221,7 @@ int main()
 	int count = 0;
 	char tmp[30] = { 0, };
 	int k;
+	int i, j;
 
 	while (1)
 	{
@@ -239,6 +240,16 @@ int main()
 
 		if (input == 0)
 		{
+			for (i = 0; i < 3; i++)
+			{
+				for (j = 0; j < 2; j++)
+				{
+					for (k = 0; k < 30; k++)
+					{
+						custom1[i][j][k] = 0;
+					}
+				}
+			}
 			system("cls");
 			printf("ÀÌ¸§ : ");
 			scanf("%s", name);
