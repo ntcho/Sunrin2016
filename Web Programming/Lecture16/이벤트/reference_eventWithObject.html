@@ -11,14 +11,17 @@
                 height: 100,
                 background: 'orange'
             }).on({
-                // {
+                click:function() {
                     $(this).css('background', 'red');
                 },
-                // () {
+                mouseenter:function() {
                     $(this).css('background', 'blue');
                 },
-                //() {
+                mouseleave:function() {
                     $(this).css('background', 'orange');
+                },
+                hover:function() {
+                    $(this).css('background', 'green');
                 }
             });
         });

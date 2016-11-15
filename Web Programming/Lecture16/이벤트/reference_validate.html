@@ -12,12 +12,12 @@
                 var value = $('input').val();
 
                 // 유효성을 검사합니다.
-                if (value.replace(    // , '').length == 0) {
+                if (value.replace(/[ㄱ-힣]/g, '').length == 0) {
                     // 유효성 검사 통과
-                    alert('과정을 진행합니다.');
+                    alert('Continue');
                 } else {
                     // 유효성 검사 실패
-                    alert('한글 이름을 입력해주세요.');
+                    alert('Please input Korean name');
                     event.preventDefault();
                 }
             });
@@ -26,7 +26,7 @@
 </head>
 <body>
     <form>
-        <label>이름</label>
+        <label>Name </label>
         <input type="text" />
         <input type="submit" />
     </form>
