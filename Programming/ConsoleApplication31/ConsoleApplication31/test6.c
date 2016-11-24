@@ -3,32 +3,32 @@
 // under dev
 
 struct Circle {
+	float rad;
+	float length;
 };
 
 void main() {
-	FILE *score;
+	FILE *circle;
 	char str[216];
 	char ch;
-	struct Score list[10];
+	struct Circle list[5];
 	int i = 0;
 	int n;
 
-	score = fopen("score.dat", "r");
-	if (score == NULL) {
+	circle = fopen("circle.txt", "r");
+	if (circle == NULL) {
 		printf("Error occured while reading the file\n");
 	}
-	while (fscanf(score, "%d %s %d %d %d",
-		&list[i].no, &list[i].name, &list[i].ko, &list[i].en, &list[i].ma) != EOF) {
-		list[i].tot = list[i].ko + list[i].en + list[i].ma;
+	while (fscanf(circle, "%f", &list[i].length) != EOF) {
+		list[i].rad = list[i].length / 3.14 / 2.0;
 		i++;
 	}
-	printf("No Name Ko En Ma Tot\n\n");
 	for (n = 0; n < i; n++) {
-		fprintf(stdout, "%d %s %d %d %d %d",
-			list[n].no, list[n].name, list[n].ko, list[n].en, list[n].ma, list[n].tot);
+		fprintf(stdout, "Length : %.1f / Radius : %.2f",
+			list[n].length, list[n].rad);
 		printf("\n");
 	}
-	printf("\n\n");
+	printf("\n");
 
-	fclose(score);
+	fclose(circle);
 }
