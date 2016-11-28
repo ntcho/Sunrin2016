@@ -1,0 +1,4 @@
+Adjacent : 10, Opposite : 10, Area of triangle : 50.0
+Adjacent : 25, Opposite : 19, Area of triangle : 237.5
+Adjacent : 123, Opposite : 987, Area of triangle : 60700.5
+Adjacent : 1, Opposite : 9999, Area of triangle : 4999.5
