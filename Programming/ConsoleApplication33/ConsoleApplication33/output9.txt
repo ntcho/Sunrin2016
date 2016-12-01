@@ -1,3 +1,3 @@
-Length of string : 43
-Starting position of the longest word : 5
-The longest word in string : "largest"
+Length of full string : 67
+Starting position of the longest word(s) : 5, 13, 21, 29
+The longest word in string : "largest", "longest", "lolulol", "sevenlo"
