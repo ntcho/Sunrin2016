@@ -30,5 +30,20 @@
     <ClCompile Include="test5.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="test6.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test9.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test10.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,0 +1,3 @@
+Length of string : 43
+Starting position of the longest word : 5
+The longest word in string : "largest"
