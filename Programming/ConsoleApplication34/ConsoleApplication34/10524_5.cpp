@@ -24,21 +24,40 @@ Menu menu[3] = {
 };
 
 void printMenu(Menu menu) {
-	printf("Menu\n");
-	
+	printf("\n%2d %10s %dwon", menu.no, menu.food, menu.price);
+}
+
+void printAllMenu() {
+	printf("--Menu--");
+	for (int i = 0; i < 3; i++) {
+		printMenu(menu[i]);
+	}
+}
+
+void printCheckedMenu() {
+	printf("\n--Bill--");
+	int totalPrice = 0;
+	for (int i = 0; i < 3; i++) {
+		if (menu[i].check == 1) {
+			printMenu(menu[i]);
+			totalPrice += menu[i].price;
+		}
+	}
+	printf("\n\n--Total--");
+	printf("\n%dwon\n", totalPrice);
 }
 
 void main() {
-	printf("Time over\n");
-	/*
 	int value = 1;
 
-	while (value == 1) {
-		printf("\n\nChange point [true : 1 / false = 0] : ");
+	printAllMenu();
+	printf("\n\n--Order--\n");
+	printf("Input menu id [edit = 0]\n");
+	while (value != 0) {
+		printf("Input : ");
 		scanf("%d", &value);
-		if (value == 1) {
-			rect = editRect(rect);
-		}
+		//check true
+		menu[value - 1].check = 1;
 	}
-	*/
+	printCheckedMenu();
 }
